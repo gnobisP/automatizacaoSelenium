@@ -1,3 +1,27 @@
+# ******************************************************************************
+# Makefile - Guia de Uso
+# 
+# Este Makefile é compatível com Linux e Windows e gerencia a execução de 
+# scripts de automação. Siga as instruções abaixo para utilizá-lo:
+#
+# --- Como Usar ---
+
+# - Para executar o script run.sh (Linux):
+#   make run-sh
+#
+# - Para executar o arquivo run.bat (Windows):
+#   make run-bat
+#
+# - Para executar cenários específicos:
+#   make cenario1  # Executa o cenário 1
+#   make cenario2  # Executa o cenário 2
+#   make cenario3  # Executa o cenário 3
+#
+# - Para limpar arquivos temporários:
+#   make clean
+#
+# ******************************************************************************
+
 # Defina o nome dos arquivos
 RUN_SH = run.sh
 RUN_BAT = run.bat
