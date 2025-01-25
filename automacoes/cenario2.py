@@ -1,34 +1,42 @@
 """
-Cenário: Verificar mensagem de erro para e-mail e senha inválidos
+Cenário: O usuário já possui uma conta e deseja alterar a senha.
+
 Dado que o usuário esteja na página de login do "Automation Practice".
-Quando o usuário inserir um e-mail inválido ou uma senha inválida e clicar no botão "Sign in".
-Então a página deve exibir uma mensagem de erro indicando que as credenciais fornecidas são inválidas
+
+Quando o usuário clicar na opção para alterar a senha e inserir um email válido.
+
+Então, a página deve exibir uma mensagem informando que um e-mail foi enviado para a mudança de senha 
 """
 import time
 
 
 from uteis.exceptionsLogin import InvalidPasswordException, InvalidEmailException, AuthenticationFailedException
-from uteis.moduloLogin import realiza_login
+from uteis.moduloLogin import alteraSenhaUsuario
 from uteis.moduloConfiguracoes import inicia_servico
 
+from classes.Usuario import Usuario, Date
 
 if __name__ == "__main__":
 
+    usuario = Usuario(
+        title="Mrs",
+        first_name="John",
+        last_name="Doe",
+        email="john1234567foe@example.com",
+        password="12345678",
+        date_of_birth=Date("15", "1", "1990")
+    )
     navegador = inicia_servico()
 
-    #Email inválido
     try:
-        realiza_login(navegador, "gmail.com", "1123456as")
+        alteraSenhaUsuario(navegador, usuario)
+        print("Email para mudança de senha enviado!")
     except Exception as e:
         print(f"Erro inesperado: {e}")
 
-    #Senha inválida
-    try:
-        realiza_login(navegador, "teste@gmail.com", "1")
-    except Exception as e:
-        print(f"Erro inesperado: {e}")
+    time.sleep(7)
+    navegador.quit()
 
- 
 
 
 
