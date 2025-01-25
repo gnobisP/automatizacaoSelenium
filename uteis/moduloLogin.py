@@ -11,7 +11,7 @@ from uteis.exceptionsLogin import InvalidPasswordException, InvalidEmailExceptio
 from uteis.exceptionsCadastro import LastNameRequiredException, FirstNameRequiredException, PasswordRequiredException, InvalidDateOfBirthException, AuthenticationFailedException 
 
 
-def realiza_login(navegador, user, password):
+def realiza_login(navegador, usuario):
     """Realiza login no site."""
     navegador.get('http://www.automationpractice.pl/index.php?controller=authentication&back=my-account')
     
@@ -19,13 +19,13 @@ def realiza_login(navegador, user, password):
     email_field = WebDriverWait(navegador, 5).until(  # Espera reduzida para 5 segundos
         EC.visibility_of_element_located((By.XPATH, '//*[@id="email"]'))
     )
-    email_field.send_keys(user)
+    email_field.send_keys(usuario.email)
     
     # Preenche o campo de senha
     password_field = WebDriverWait(navegador, 5).until(  # Espera reduzida para 5 segundos
         EC.visibility_of_element_located((By.XPATH, '//*[@id="passwd"]'))
     )
-    password_field.send_keys(password)
+    password_field.send_keys(usuario.password)
     
     # Clica no botão de login
     login_button = WebDriverWait(navegador, 5).until(  # Espera reduzida para 5 segundos
@@ -126,7 +126,31 @@ def cadastrarUsuario(navegador, usuario):
         )
 
         #Roda Script para preencher um grande quantidade de dados (muito dor, sofrimento, mas deu certo :))
-        navegador.execute_script("""
+        preencheFormulario(navegador, usuario)
+  
+        # Clicar no botão de envio
+        submit_button = WebDriverWait(navegador, 20).until(
+            EC.element_to_be_clickable((By.XPATH, '//*[@id="submitAccount"]'))
+        )
+        submit_button.click()
+
+    except Exception as e:
+        raise e
+    
+    try:
+        # Espera até que a URL seja a esperada
+        WebDriverWait(navegador, 5).until(  
+            EC.url_to_be('http://www.automationpractice.pl/index.php?controller=my-account')
+        )
+    except Exception as e:
+        # Se o login falhou, captura o erro
+        try:
+            captura_erros_cadastro(navegador)
+        except Exception as e:
+            raise e        
+   
+def preencheFormulario(navegador, usuario):
+    navegador.execute_script("""
         // Selecionar o radio button (Mr/Mrs)
         if(arguments[0] === 'Mr' || arguments[0] === 'Mrs')
             document.getElementById('id_gender' + (arguments[0] === 'Mr' ? '1' : '2')).click();
@@ -172,26 +196,4 @@ def cadastrarUsuario(navegador, usuario):
         usuario.password, 
         usuario.date_of_birth.day, 
         usuario.date_of_birth.month, 
-        usuario.date_of_birth.year)  # Ano de nascimento
-
-        # Clicar no botão de envio
-        submit_button = WebDriverWait(navegador, 20).until(
-            EC.element_to_be_clickable((By.XPATH, '//*[@id="submitAccount"]'))
-        )
-        submit_button.click()
-
-    except Exception as e:
-        raise e
-    
-    try:
-        # Espera até que a URL seja a esperada
-        WebDriverWait(navegador, 5).until(  
-            EC.url_to_be('http://www.automationpractice.pl/index.php?controller=my-account')
-        )
-    except Exception as e:
-        # Se o login falhou, captura o erro
-        try:
-            captura_erros_cadastro(navegador)
-        except Exception as e:
-            raise e        
-   
+        usuario.date_of_birth.year)  # Ano de nascimento    
