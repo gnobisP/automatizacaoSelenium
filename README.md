@@ -34,5 +34,55 @@ Este repositório contém a implementação de três cenários de teste automati
 - **Linguagem de Programação**: [Python]
 - **IDE**: [VSCode]
 
-## 🚀 Como Executar os Testes
+
+
+# Estrutura de Arquivos do Projeto
+
+Este repositório contém a automação de cenários relacionados à funcionalidade de login do site "Automation Practice". Abaixo está a descrição detalhada da estrutura de pastas e arquivos do projeto:
+
+## 📁 Estrutura do Projeto
+
+### 📂 `automacoes`
+Contém os arquivos responsáveis pela automação dos cenários de teste relacionados à funcionalidade de login. 
+Cada arquivo neste diretório representa um cenário de teste automatizado:
+
+- **`cenario1.py`**: Automação para o cenário de login bem-sucedido após tentativa com senha incorreta.
+- **`cenario2.py`**: Automação para o cenário de alteração de senha por e-mail.
+- **`cenario3.py`**: Automação para o cenário de cadastro de novo usuário.
+
+---
+
+### 📂 `classes`
+Armazena as classes utilizadas no projeto relacionadas à funcionalidade de login. Estas classes são usadas para modelar as entidades e comportamentos necessários:
+
+- **`Usuario.py`**: Classe para manipulação e armazenamento de informações do usuário.
+- **`Date.py`**: Classe para lidar com operações relacionadas a datas (se aplicável).
+
+---
+
+### 📂 `uteis`
+Contém funcionalidades e módulos auxiliares que suportam o projeto, especificamente voltados para as operações de login:
+
+- **`exceptionsCadastro.py`**: Gerencia exceções relacionadas ao cadastro de novos usuários.
+- **`exceptionsLogin.py`**: Trata exceções específicas do processo de login.
+- **`moduloLogin.py`**: Funções que implementam operações fundamentais de login.
+- **`moduloRealizaCompra.py`**: (Se relevante ao login) Funções para integrar o login com a funcionalidade de compras.
+- **`moduloConfiguracoes.py`**: Configurações gerais relacionadas à automação e login.
+- **`utilidadesLogin.py`**: Métodos utilitários para suporte ao login, como validações e formatações.
+
+---
+
+### Outros Arquivos
+- **`LICENSE`**: Arquivo contendo a licença do projeto.
+- **`pyproject.toml`**: Configuração do ambiente Python e dependências do projeto.
+- **`run.bat`** e **`run.sh`**: Scripts para execução automatizada dos testes em ambientes Windows e Linux/Mac, respectivamente.
+- **`TODO.md`**: Lista de pendências e melhorias futuras para o projeto.
+- **`README.md`**: Documentação principal do projeto.
+
+---
+
+## 🛠 Como Navegar no Projeto
+Cada pasta possui um papel específico e organiza o código para facilitar a manutenção e expansão do projeto. Caso deseje adicionar novos cenários, utilize a pasta `automacoes`. Para alterações nas funcionalidades principais, edite os arquivos em `uteis`. Novas classes de suporte devem ser adicionadas em `classes`.
+
+
 
