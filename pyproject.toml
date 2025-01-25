@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meu_modulo"
+version = "0.1.0"
+description = "Biblioteca de automação com Selenium para compra de camisas."
+readme = "README.md"
+authors = [{name = "Seu Nome", email = "seu.email@email.com"}]
+license = {text = "MIT"}
+dependencies = ["selenium", "webdriver_manager"]
+
+[project.urls]
+"Homepage" = "https://github.com/seu_usuario/meu_modulo"

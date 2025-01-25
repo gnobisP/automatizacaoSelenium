@@ -93,11 +93,12 @@ def compraUmaCamisa(navegador):
 servico = Service(ChromeDriverManager().install())
 navegador = webdriver.Chrome(service=servico)
 navegador.get("http://www.automationpractice.pl/index.php?id_category=3&controller=category")
-print('sucess0 - Site acessado')
+print('sucess - Site acessado')
 
 realizaLogin(navegador, 'testeGustavoPimenta@teste.com', 'testeGustavoPimenta')
 print('sucess - login Efetuado')
 
 compraUmaCamisa(navegador)
 print('sucess - Camisa comprada')
+
 
