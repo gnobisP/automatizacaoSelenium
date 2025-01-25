@@ -42,7 +42,6 @@ def realiza_login(navegador, user, password):
         try:
             captura_erros_login(navegador)
         except Exception as e:
-            print(f"Erro no login: {e}")
             raise
 
 
