@@ -15,27 +15,40 @@ def inicia_servico():
     navegador.get("http://www.automationpractice.pl/index.php?id_category=3&controller=category")
     return navegador
 
-
 def realiza_login(navegador, user, password):
     """Realiza login no site."""
     navegador.get('http://www.automationpractice.pl/index.php?controller=authentication&back=my-account')
     
+    # Preenche o campo de e-mail
     email_field = WebDriverWait(navegador, 10).until(
         EC.visibility_of_element_located((By.XPATH, '//*[@id="email"]'))
     )
     email_field.send_keys(user)
     
+    # Preenche o campo de senha
     password_field = WebDriverWait(navegador, 10).until(
         EC.visibility_of_element_located((By.XPATH, '//*[@id="passwd"]'))
     )
     password_field.send_keys(password)
     
+    # Clica no botão de login
     login_button = WebDriverWait(navegador, 10).until(
         EC.element_to_be_clickable((By.XPATH, '//*[@id="SubmitLogin"]/span'))
     )
     login_button.click()
-    print('sucess - login efetuado')
+    
+    sucesso = False
 
+    try:
+        # Espera até que a URL seja a esperada
+        WebDriverWait(navegador, 10).until(
+            EC.url_to_be('http://www.automationpractice.pl/index.php?controller=my-account')
+        )
+        sucesso = True
+    except Exception as e:
+        sucesso = False
+        
+    return sucesso
 
 def compra_uma_camisa(navegador):
     """Realiza a compra de uma camisa no site."""
