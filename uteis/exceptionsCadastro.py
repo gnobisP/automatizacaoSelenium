@@ -18,4 +18,7 @@ class InvalidDateOfBirthException(Exception):
 class AuthenticationFailedException(Exception):
     """Exceção para credenciais inválidas.""" 
     pass  
- 
+
+class emailEddressAlreadyRegistered(Exception):
+    """Uma conta com esse email já existe""" 
+    pass  
