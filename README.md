@@ -16,13 +16,13 @@ Este repositório contém a implementação de três cenários de teste automati
 - **Navegador**: [Google Chrome]
 
 ## 🚀 Como rodar o Projeto
-git clone <https://github.com/gnobisP/automatizacaoSelenium.git>
+git clone https://github.com/gnobisP/automatizacaoSelenium.git
 
 ### Windows:
   - **Instalando dependências:**
   Instale o Google Chrome
   Instale o Python
-  instale o Selenium ('pip install selenium')
+  instale o Selenium ("pip install selenium")
   instale o webdriver_manager ("pip install webdriver_manager")
 
   - **Executando cenârios:**
@@ -32,6 +32,7 @@ git clone <https://github.com/gnobisP/automatizacaoSelenium.git>
 
 ### Linux:
   - **Instalando dependências:**
+    Instale o Google Chrome
     make install
 
   - **Executando cenârios:**
