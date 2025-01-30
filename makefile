@@ -67,19 +67,41 @@ run-bat:
 # Executa o primeiro cenário de automação
 cenario1:
 	@echo "Iniciando o cenário 1..."
-	$(PYTHON) -m automacoes.cenario1
-
+	@if [ "$(OS)" != "Windows_NT" ]; then \
+		. venv/bin/activate && $(PYTHON) -m automacoes.cenario1; \
+	else \
+		$(PYTHON) -m automacoes.cenario2; \
+	fi
 # Executa o segundo cenário de automação
 cenario2:
 	@echo "Iniciando o cenário 2..."
-	$(PYTHON) -m automacoes.cenario2
-
+	@if [ "$(OS)" != "Windows_NT" ]; then \
+		. venv/bin/activate && $(PYTHON) -m automacoes.cenario2; \
+	else \
+		$(PYTHON) -m automacoes.cenario2; \
+	fi
 # Executa o terceiro cenário de automação
 cenario3:
 	@echo "Iniciando o cenário 3..."
-	$(PYTHON) -m automacoes.cenario3
-
+	@if [ "$(OS)" != "Windows_NT" ]; then \
+		. venv/bin/activate && $(PYTHON) -m automacoes.cenario3; \
+	else \
+		$(PYTHON) -m automacoes.cenario2; \
+	fi
 # Limpeza (caso queira limpar arquivos gerados ou desnecessários)
 clean:
 	@echo "Limpando arquivos temporários..."
 	$(DEL) *.o *.log
+
+install:
+	@if [ "$(OS)" = "Windows_NT" ]; then \
+		echo "Detectado Windows"; \
+		python -m pip install selenium webdriver-manager; \
+    else \
+		echo "Detectado Linux"; \
+		sudo apt-get update; \
+		sudo apt-get install -y python3 python3-pip python3-venv; \
+		python3 -m venv venv; \
+		. venv/bin/activate; \
+		pip install selenium webdriver-manager; \
+	fi
