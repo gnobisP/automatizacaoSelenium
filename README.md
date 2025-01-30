@@ -50,7 +50,7 @@ Este repositório contém a implementação de três cenários de teste automati
       python -m automacoes.cenario3
       ```
 
-### Linux:
+### 🐧 Linux:
   - **Instalando dependências:**
     - Instale o [Google Chrome](https://www.google.com/chrome/?platform=linux/)
     - Instale as dependências:
