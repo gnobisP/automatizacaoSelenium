@@ -26,11 +26,21 @@ Este repositório contém a implementação de três cenários de teste automati
   - **Instalando dependências:**
     - Instale o [Google Chrome](https://www.google.com/intl/pt-BR/chrome/)
     - Instale o [Python](https://www.python.org/downloads/release/python-3123/)
-    - instale o Selenium ("pip install selenium")
-    - instale o webdriver_manager ("pip install webdriver_manager")
+    - instale o Selenium: 
+    ```sh
+    pip install selenium
+    ```
+    - instale o webdriver_manager 
+    ```sh
+    pip install webdriver_manager
+    ```
 
   - **Executando cenârios:**
-  - **Cenário 1**: python -m automacoes.cenario1
+  - **Cenário 1**: 
+  ```sh
+  python -m automacoes.cenario1
+  ```
+
   - **Cenário 2**: python -m automacoes.cenario2
   - **Cenário 3**: python -m automacoes.cenario3
 
