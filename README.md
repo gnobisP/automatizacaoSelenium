@@ -16,7 +16,10 @@ Este repositório contém a implementação de três cenários de teste automati
 - **Navegador**: [Google Chrome]
 
 ## 🚀 Como rodar o Projeto
-git clone https://github.com/gnobisP/automatizacaoSelenium.git
+```sh
+  git clone https://github.com/gnobisP/automatizacaoSelenium.git
+  cd AUTOMATIZACAOSELENIUM
+
 
 ### Windows:
   - **Instalando dependências:**
