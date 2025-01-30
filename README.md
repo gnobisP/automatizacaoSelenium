@@ -19,7 +19,7 @@ Este repositório contém a implementação de três cenários de teste automati
 ```sh
   git clone https://github.com/gnobisP/automatizacaoSelenium.git
   cd AUTOMATIZACAOSELENIUM
-'''
+```
 
 
 ### Windows:
