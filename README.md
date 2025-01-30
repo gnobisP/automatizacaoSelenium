@@ -36,23 +36,39 @@ Este repositório contém a implementação de três cenários de teste automati
     ```
 
   - **Executando cenârios:**
-  - **Cenário 1**: 
-  ```sh
-  python -m automacoes.cenario1
-  ```
-
-  - **Cenário 2**: python -m automacoes.cenario2
-  - **Cenário 3**: python -m automacoes.cenario3
+    - **Cenário 1**: 
+    ```sh
+    python -m automacoes.cenario1
+    ```
+    - **Cenário 2**: 
+    ```sh
+    python -m automacoes.cenario2
+    ```
+    - **Cenário 3**: 
+    ```sh
+    python -m automacoes.cenario3
+    ```
 
 ### Linux:
   - **Instalando dependências:**
     - Instale o [Google Chrome]("https://www.google.com/chrome/?platform=linux")
-    - make install
+    - Instale as dependências:
+      ```sh
+      make install
+      ```
 
   - **Executando cenârios:**
-  - **Cenário 1**: make cenario1
-  - **Cenário 2**: make cenario2
-  - **Cenário 3**: make cenario3
+    - **Cenário 1**: 
+    ```sh
+    make cenario1
+    ```
+    - **Cenário 2**: 
+    ```sh
+    make cenario2
+    ```
+    - **Cenário 3**: ```sh
+    make cenario3
+    ```
 
 ## 📑 Cenários de Teste
 
