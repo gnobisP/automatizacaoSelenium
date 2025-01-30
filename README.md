@@ -51,7 +51,7 @@ Este repositório contém a implementação de três cenários de teste automati
 
 ### Linux:
   - **Instalando dependências:**
-    - Instale o [Google Chrome]("https://www.google.com/chrome/?platform=linux")
+    - Instale o [Google Chrome](https://www.google.com/chrome/?platform=linux/)
     - Instale as dependências:
       ```sh
       make install
@@ -66,7 +66,8 @@ Este repositório contém a implementação de três cenários de teste automati
     ```sh
     make cenario2
     ```
-    - **Cenário 3**: ```sh
+    - **Cenário 3**: 
+    ```sh
     make cenario3
     ```
 
@@ -131,7 +132,7 @@ Contém funcionalidades e módulos auxiliares que suportam o projeto, especifica
 - **`exceptionsCadastro.py`**: Gerencia exceções relacionadas ao cadastro de novos usuários.
 - **`exceptionsLogin.py`**: Trata exceções específicas do processo de login.
 - **`moduloLogin.py`**: Funções que implementam operações fundamentais de login.
-- **`moduloRealizaCompra.py`**: (Se relevante ao login) Funções para integrar o login com a funcionalidade de compras.
+- **`moduloRealizaCompra.py`**:  Modulo de teste de compra do cenário
 - **`moduloConfiguracoes.py`**: Configurações gerais relacionadas à automação e login.
 - **`utilidadesLogin.py`**: Métodos utilitários para suporte ao login, como validações e formatações.
 
