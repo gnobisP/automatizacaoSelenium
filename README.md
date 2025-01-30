@@ -4,24 +4,40 @@ Este repositório contém a implementação de três cenários de teste automati
 ## 🛠 Tecnologias Utilizadas (Windows)
 - **Framework de Automação**: [Selenium - 4.28.1] 
 - **Linguagem de Programação**: [Python - 3.13.1]
+- **Biblioteca Python**: [webdriver_manager - 3.8.5]
 - **IDE**: [VSCode]
+- **Navegador**: [Google Chrome]
 
 ## 🛠 Tecnologias Utilizadas (Linux)
-- **Framework de Automação**: [Selenium] 
-- **Linguagem de Programação**: [Python]
+- **Framework de Automação**: [Selenium - 4.28.1] 
+- **Linguagem de Programação**: [Python3 - 3.12.3] 
+- **Biblioteca Python**: [webdriver_manager - 3.8.5]
 - **IDE**: [VSCode]
+- **Navegador**: [Google Chrome]
 
 ## 🚀 Como rodar o Projeto
+git clone <https://github.com/gnobisP/automatizacaoSelenium.git>
+
 ### Windows:
-  Execute o comando: 
+  - **Instalando dependências:**
+  Instale o Google Chrome
+  Instale o Python
+  instale o Selenium ('pip install selenium')
+  instale o webdriver_manager ("pip install webdriver_manager")
+
+  - **Executando cenârios:**
   - **Cenário 1**: python -m automacoes.cenario1
   - **Cenário 2**: python -m automacoes.cenario2
   - **Cenário 3**: python -m automacoes.cenario3
 
-  - **Todos Cenários** powershell: ./run.bat
-  - **Todos Cenários** terminal Windows: run.bat
 ### Linux:
-    Exe
+  - **Instalando dependências:**
+    make install
+
+  - **Executando cenârios:**
+  - **Cenário 1**: make cenario1
+  - **Cenário 2**: make cenario2
+  - **Cenário 3**: make cenario3
 
 ## 📑 Cenários de Teste
 
