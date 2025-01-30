@@ -16,6 +16,7 @@ Este repositório contém a implementação de três cenários de teste automati
 - **Navegador**: [Google Chrome]
 
 ## 🚀 Como rodar o Projeto
+  - **Clone o repositório:**
 ```sh
   git clone https://github.com/gnobisP/automatizacaoSelenium.git
   cd AUTOMATIZACAOSELENIUM
@@ -27,27 +28,27 @@ Este repositório contém a implementação de três cenários de teste automati
     - Instale o [Google Chrome](https://www.google.com/intl/pt-BR/chrome/)
     - Instale o [Python](https://www.python.org/downloads/release/python-3123/)
     - instale o Selenium: 
-    ```sh
-    pip install selenium
-    ```
+      ```sh
+      pip install selenium
+      ```
     - instale o webdriver_manager 
-    ```sh
-    pip install webdriver_manager
-    ```
+      ```sh
+      pip install webdriver_manager
+      ```
 
   - **Executando cenârios:**
     - **Cenário 1**: 
-    ```sh
-    python -m automacoes.cenario1
-    ```
+      ```sh
+      python -m automacoes.cenario1
+      ```
     - **Cenário 2**: 
-    ```sh
-    python -m automacoes.cenario2
-    ```
+      ```sh
+      python -m automacoes.cenario2
+      ```
     - **Cenário 3**: 
-    ```sh
-    python -m automacoes.cenario3
-    ```
+      ```sh
+      python -m automacoes.cenario3
+      ```
 
 ### Linux:
   - **Instalando dependências:**
@@ -59,17 +60,17 @@ Este repositório contém a implementação de três cenários de teste automati
 
   - **Executando cenârios:**
     - **Cenário 1**: 
-    ```sh
-    make cenario1
-    ```
+      ```sh
+      make cenario1
+      ```
     - **Cenário 2**: 
-    ```sh
-    make cenario2
-    ```
+      ```sh
+      make cenario2
+      ```
     - **Cenário 3**: 
-    ```sh
-    make cenario3
-    ```
+      ```sh
+      make cenario3
+      ```
 
 ## 📑 Cenários de Teste
 
