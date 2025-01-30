@@ -1,6 +1,28 @@
 # Desafio Técnico - Quality Assurance Automation Engineer
 Este repositório contém a implementação de três cenários de teste automatizados utilizando o site [Automation Practice](http://automationpractice.pl/index.php?controller=authentication&back=my-account). O desafio foi desenvolvido para avaliar habilidades de automação e cobertura de casos de teste.
 
+## 🛠 Tecnologias Utilizadas (Windows)
+- **Framework de Automação**: [Selenium - 4.28.1] 
+- **Linguagem de Programação**: [Python - 3.13.1]
+- **IDE**: [VSCode]
+
+## 🛠 Tecnologias Utilizadas (Linux)
+- **Framework de Automação**: [Selenium] 
+- **Linguagem de Programação**: [Python]
+- **IDE**: [VSCode]
+
+## 🚀 Como rodar o Projeto
+### Windows:
+  Execute o comando: 
+  - **Cenário 1**: python -m automacoes.cenario1
+  - **Cenário 2**: python -m automacoes.cenario2
+  - **Cenário 3**: python -m automacoes.cenario3
+
+  - **Todos Cenários** powershell: ./run.bat
+  - **Todos Cenários** terminal Windows: run.bat
+### Linux:
+    Exe
+
 ## 📑 Cenários de Teste
 
 ### 1️⃣ **Login bem-sucedido após tentativa com senha incorreta**
@@ -12,6 +34,7 @@ Este repositório contém a implementação de três cenários de teste automati
   - Primeiramente, a página exibirá uma mensagem de erro sobre credenciais incorretas.
   - Após o segundo login bem-sucedido, o usuário será redirecionado para a página "my-account".
 
+- **Excessões tratadas**: LoginInvalidPasswordException, LoginInvalidEmailException, LoginAuthenticationFailedException
 ---
 
 ### 2️⃣ **Alteração de senha por e-mail**
@@ -19,6 +42,7 @@ Este repositório contém a implementação de três cenários de teste automati
 - **Quando** o usuário clicar na opção de "Alterar Senha" e inserir um e-mail válido.
 - **Então** a página exibirá uma mensagem informando que um e-mail foi enviado para a alteração da senha.
 
+- **Excessões tratadas**: InvalidEmailException
 ---
 
 ### 3️⃣ **Cadastro de novo usuário**
@@ -27,14 +51,8 @@ Este repositório contém a implementação de três cenários de teste automati
 - **Quando** o usuário inserir um e-mail válido no campo "Create an account" e clicar no botão correspondente.
 - **Então** o sistema redirecionará o usuário para a página de registro, onde ele poderá preencher suas informações pessoais para criar uma nova conta.
 
+- **Excessões tratadas**: CadastroLastNameRequiredException, CadastroFirstNameRequiredException, CadastroPasswordRequiredException, CadastroInvalidDateOfBirthException, CadastroAuthenticationFailedException.
 ---
-
-## 🛠 Tecnologias Utilizadas
-- **Framework de Automação**: [Selenium] 
-- **Linguagem de Programação**: [Python]
-- **IDE**: [VSCode]
-
-
 
 # Estrutura de Arquivos do Projeto
 
@@ -83,6 +101,3 @@ Contém funcionalidades e módulos auxiliares que suportam o projeto, especifica
 
 ## 🛠 Como Navegar no Projeto
 Cada pasta possui um papel específico e organiza o código para facilitar a manutenção e expansão do projeto. Caso deseje adicionar novos cenários, utilize a pasta `automacoes`. Para alterações nas funcionalidades principais, edite os arquivos em `uteis`. Novas classes de suporte devem ser adicionadas em `classes`.
-
-
-
