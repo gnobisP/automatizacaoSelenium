@@ -20,10 +20,10 @@ git clone https://github.com/gnobisP/automatizacaoSelenium.git
 
 ### Windows:
   - **Instalando dependências:**
-  Instale o Google Chrome
-  Instale o Python
-  instale o Selenium ("pip install selenium")
-  instale o webdriver_manager ("pip install webdriver_manager")
+    - Instale o Google Chrome
+    - Instale o Python
+    - instale o Selenium ("pip install selenium")
+    - instale o webdriver_manager ("pip install webdriver_manager")
 
   - **Executando cenârios:**
   - **Cenário 1**: python -m automacoes.cenario1
@@ -32,8 +32,8 @@ git clone https://github.com/gnobisP/automatizacaoSelenium.git
 
 ### Linux:
   - **Instalando dependências:**
-    Instale o Google Chrome
-    make install
+    - Instale o Google Chrome
+    - make install
 
   - **Executando cenârios:**
   - **Cenário 1**: make cenario1
